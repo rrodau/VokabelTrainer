@@ -1,0 +1,127 @@
+span {
+    padding-left: 0.5vw;
+}
+
+
+.page-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.mdl-textfield {
+    width: 100%;
+}
+
+#table {
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    overflow-y: scroll !important;
+}
+
+#possibleSolution {
+    display: none;
+    color: green;
+}
+
+.scroll {
+    width: 70%;
+    margin: 0 auto;
+    height: 70%;
+    overflow-y: scroll !important;
+}
+
+td {
+    text-align: center !important;
+    font-size: 2vw;
+}
+
+tr:hover {
+    background-color: rgba(0,0,0,0.2) !important;
+}
+
+th {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    font-size: 2.5vw !important;
+    text-align: center !important;
+    /*color: rgba(255,255,255,0.6) !important;*/
+}
+
+table th + th {
+    border-left: 2px solid rgba(0,0,0,0.4);
+
+}
+
+table td + td {
+    border-left: 2px solid rgba(0,0,0,0.4);
+
+}
+
+
+#test {
+    display: none;
+}
+
+#nextButton {
+    display: none;
+    margin: 0 auto;
+}
+
+#compareButton {
+    margin: 0 auto;
+}
+
+#results {
+    display: none;
+    margin: 0 auto;
+}
+
+main {
+    background-color: #323232;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5vw;
+    color: white;
+}
+
+#userInput {
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+}
+
+#question { 
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+    color: white;
+    font-size: 5vw;
+}
+
+@media screen and (min-width: 1600px) {
+    td {
+       font-size: 26px;
+    }
+
+    th {
+        font-size: 30px !important;
+    }
+  }
