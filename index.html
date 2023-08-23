@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="main.js"></script>
+  <script type="module" src="languages.js"></script>
   <title>Vokabel Trainer</title>
 </head>
 
@@ -23,19 +23,22 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="index.html">Vokabeltest</a>
+          <a class="mdl-navigation__link" href="languages.js">Vokabeltest</a>
         </nav>
       </div>
     </header>
+    <!-- Drawer for languages -->
     <div class="mdl-layout__drawer">
+
       <span class="mdl-layout-title">Vokabeltrainer</span>
-      <nav class="mdl-navigation">
-        <a id="chapter0" class="mdl-navigation__link" href="#" onclick="getChapter(0)">Chapter 1</a>
-        <a id="chapter1" class="mdl-navigation__link" href="#" onclick="getChapter(1)">Chapter 2</a>
-        <a id="chapter2" class="mdl-navigation__link" href="#" onclick="getChapter(2)">Chapter 3</a>
-        <a id="chapter3" class="mdl-navigation__link" href="#" onclick="getChapter(3)">Chapter 4</a>
-        <a id="chapter4" class="mdl-navigation__link" href="#" onclick="getChapter(4)">Chapter 5</a>
-        <a id="chapter5" class="mdl-navigation__link" href="#" onclick="getChapter(5)">Chapter 6</a>
+      <span>
+        <button id="add-new" onclick="createModal('createLanguage');"
+          class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+          <i class="material-icons">add</i>
+        </button>
+      </span>
+
+      <nav id="language-selection" class="mdl-navigation">
       </nav>
     </div>
     <main class="mdl-layout__content">
@@ -55,6 +58,20 @@
       </div>
 
       <dialog class="mdl-dialog">
+        <h4 class="mdl-dialog__title">New Language</h4>
+        <div class="mdl-dialog__content">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input id="new-language" class="mdl-textfield__input" type="text" id="sample1">
+            <label class="mdl-textfield__label" for="sample1">Text...</label>
+          </div>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button accept">Create</button>
+          <button type="button" class="mdl-button close">Cancel</button>
+        </div>
+      </dialog>
+      <!--
+      <dialog class="mdl-dialog">
         <h4 class="mdl-dialog__title">How many Vocabs?</h4>
         <div id="modalvocab" class="mdl-dialog__content">
         </div>
@@ -63,7 +80,7 @@
           <button type="button" class="mdl-button close">Disagree</button>
         </div>
       </dialog>
-
+-->
 
       <div id="test" class="page-content">
         <p>übersetze</p>
@@ -75,21 +92,23 @@
             <label class="mdl-textfield__label" for="userInput">Deutsch...</label>
           </div>
 
-          <button id="compareButton" onclick="compare(); return false;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          <button id="compareButton" onclick="compare(); return false;"
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
             Bestätigen
           </button>
         </form>
-        <button id="nextButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        <button id="nextButton"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
           Nächste
         </button>
-        <h2 id="text"></h2>     
-        <h2 id="possibleSolution"></h2>  
+        <h2 id="text"></h2>
+        <h2 id="possibleSolution"></h2>
       </div>
 
       <div id="results" class="page-content"></div>
-      </div>
+  </div>
 
-    </main>
+  </main>
   </div>
 </body>
 

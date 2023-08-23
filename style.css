@@ -23,6 +23,12 @@ span {
     overflow-y: scroll !important;
 }
 
+#language-selection > .mdl-textfield {
+    display: inline-flex;
+    margin-left: 10px;
+    width: 3vw;
+}
+
 #possibleSolution {
     display: none;
     color: green;
